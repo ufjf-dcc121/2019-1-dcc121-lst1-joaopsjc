@@ -5,12 +5,9 @@
     <title>Questão 07</title>
 </head>
 <body>
-        <div>Olá <span id="nome"></span><span id="sobrenome"></span>! Você tem <span id ="idade"></span> anos!</div>
     <script>
         var nome = "João Pedro ", sobrenome = "de Souza Jardim da Costa", idade = 27;
-        document.getElementById("nome").innerHTML = nome;
-        document.getElementById("sobrenome").innerHTML = sobrenome;
-        document.getElementById("idade").innerHTML = idade;
+        document.body.innerHTML = "Olá " + nome + sobrenome + "! Você tem " + idade + " anos!";
     </script>
 </body>
 </html>
