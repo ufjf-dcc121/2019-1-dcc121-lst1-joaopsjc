@@ -18,6 +18,11 @@
         soma = document.getElementById("soma");
         x.contentEditable = true;
         y.contentEditable = true;
+        document.getElementById("calcular").addEventListener("click",function()
+        {
+            produto.innerHTML = "O produto de "+ x.innerHTML + " e " + y.innerHTML + " é " + (x.innerHTML*y.innerHTML) +"!";
+            soma.innerHTML = "A soma de "+ x.innerHTML + " e " + y.innerHTML + " é " + (parseInt (x.innerHTML) + parseInt(y.innerHTML)) +"!";
+        })
     </script>
 </body>
 </html>
