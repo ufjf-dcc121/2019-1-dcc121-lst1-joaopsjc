@@ -6,8 +6,16 @@
 </head>
 <body>
     <p id ="nome">João Pedro</p>
-    <p id ="sobrenome"> SJ da Costa</p>
+    <p id ="sobrenome">SJ da Costa</p>
     <h1 id = "nomecompleto"></h1>
-    <script></script>
+    <script>
+    var nome,sobrenome,nomeCompleto;
+    nome = document.getElementById("nome").innerHTML;
+    sobrenome = document.getElementById("sobrenome").innerHTML;
+    nomeCompleto = nome + " " + sobrenome;
+    
+    var frase = "Bem vindo " + nomeCompleto + "!";
+    document.getElementById("nomecompleto").innerHTML = frase;
+    </script>
 </body>
 </html>
