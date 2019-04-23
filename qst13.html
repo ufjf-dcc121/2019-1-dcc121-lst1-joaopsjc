@@ -7,6 +7,12 @@
 <body>
     <div id="interativo">Clique me!</div>
     <script>
+        var interativo = document.getElementById("interativo");
+        document.addEventListener("click", function()
+        {
+            interativo.innerHTML = "Funcionou!";
+        }
+        )
     </script>
 </body>
 </html>
