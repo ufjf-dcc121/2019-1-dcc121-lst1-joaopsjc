@@ -43,19 +43,19 @@
             media = media/3;
             if(media >=70)
             {
-                resultado.innerText = "Parabéns"+ nome.innerText +"! Você está aprovado com média" + media + '!'
+                resultado.innerText = "Parabéns "+ nome.innerText +"! Você está aprovado com média " + media + '!'
             }
             else
             {
-                resultado.innerText = "Você está reprovado com média" + media + '!'
+                resultado.innerText = "Você está reprovado com média " + media + '!'
             }
             if(parseInt(confeitaria.innerText)<60)
             {
-                melhorias.innerText = nome.innerText +", considere estudar mais Confeitaria!";
+                melhorias.innerText = nome.innerText +", considere estudar mais Confeitaria! \n";
             }
             if(parseInt(coberturas.innerText)<60)
             {
-                melhorias.innerText =  melhorias.innerText + nome.innerText +", considere estudar mais Coberturas  !";
+                melhorias.innerText =  melhorias.innerText + nome.innerText +", considere estudar mais Coberturas! \n";
             }
             if(parseInt(bolos.innerText)<60)
             {
