@@ -29,10 +29,24 @@
         cobertura.contentEditable(true);
         bolos.contentEditable(true);
         botaoLimpar.addEventListener("click", limparClick());
+        botaoAvaliar.addEventListener("click", avaliarClick());
         function limparClick()
         {
             melhorias.innerText = "";
             resultado.innerText = "";
+        }
+        function avaliarClick()
+        {
+            media = parseInt(confeitaria.innerText) + parseInt(coberturas.innerText) + parseInt(bolos.innerText);
+            media = media/3;
+            if(media >=70)
+            {
+                resultado.innerText = "Parabéns Fulano! Você está aprovado com média" + media + '!'
+            }
+            else
+            {
+                resultado.innerText = "Você está reprovado com média" + media + '!'
+            }
         }
     </script>
 </body>
