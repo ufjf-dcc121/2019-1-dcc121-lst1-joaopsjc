@@ -7,12 +7,33 @@
 <body>
     <main>
         <h1>Resultado da Avaliação</h1>
-        <p>“Olá <span id="nome"></span>, você está matriculado há <span id="anos"></span> anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="n_confeitaria"></span> em Confeitaria Básica; <span id="n_coberturas"></span> em Coberturas e <span id="n_bolos"></span> em Broas e Bolos.</p>
+        <p>“Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="n_confeitaria">70</span> em Confeitaria Básica; <span id="n_coberturas">80</span> em Coberturas e <span id="n_bolos">60</span> em Broas e Bolos.</p>
         <p id="resultado"></p>
         <button id="avaliar">Avaliar</button>
         <button id="limpar">Limpar</button>
         <p id="melhorias"></p>
-
     </main>
+    <script>
+        var nome, anos, confeitaria, coberturas, bolos, botaoAvaliar, botaoLimpar, resultado, melhorias, media;
+        nome = document.getElementById("nome");
+        anos = document.getElementById("anos");
+        confeitaria = document.getElementById("n_confeitaria");
+        coberturas = document.getElementById("n_coberturas");
+        coberturas = document.getElementById("n_bolos");
+        botaoAvaliar = document.getElementById("avaliar");
+        botaoLimpar = document.getElementById("limpar");
+        melhorias = document.getElementById("melhorias");
+        nome.contentEditable(true);
+        anos.contentEditable(true);
+        confeitaria.contentEditable(true);
+        cobertura.contentEditable(true);
+        bolos.contentEditable(true);
+        botaoLimpar.addEventListener("click", limparClick());
+        function limparClick()
+        {
+            melhorias.innerText = "";
+            resultado.innerText = "";
+        }
+    </script>
 </body>
 </html>
