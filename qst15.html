@@ -7,7 +7,8 @@
 <body>
     <main>
         <h1>Resultado da Avaliação</h1>
-        <p>“Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="n_confeitaria">70</span> em Confeitaria Básica; <span id="n_coberturas">80</span> em Coberturas e <span id="n_bolos">60</span> em Broas e Bolos.</p>
+        <p>“Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são:
+             <span id="n_confeitaria">70</span> em Confeitaria Básica; <span id="n_coberturas">80</span> em Coberturas e <span id="n_bolos">60</span> em Broas e Bolos.</p>
         <p id="resultado"></p>
         <button id="avaliar">Avaliar</button>
         <button id="limpar">Limpar</button>
@@ -23,11 +24,11 @@
         botaoAvaliar = document.getElementById("avaliar");
         botaoLimpar = document.getElementById("limpar");
         melhorias = document.getElementById("melhorias");
-        nome.contentEditable(true);
-        anos.contentEditable(true);
-        confeitaria.contentEditable(true);
-        cobertura.contentEditable(true);
-        bolos.contentEditable(true);
+        nome.contentEditable = true;
+        anos.contentEditable = true;
+        confeitaria.contentEditable = true;
+        coberturas.contentEditable = true;
+        bolos.contentEditable = true;
         botaoLimpar.addEventListener("click", limparClick());
         botaoAvaliar.addEventListener("click", avaliarClick());
         function limparClick()
@@ -41,11 +42,23 @@
             media = media/3;
             if(media >=70)
             {
-                resultado.innerText = "Parabéns Fulano! Você está aprovado com média" + media + '!'
+                resultado.innerText = "Parabéns"+ nome.innerText +"! Você está aprovado com média" + media + '!'
             }
             else
             {
                 resultado.innerText = "Você está reprovado com média" + media + '!'
+            }
+            if(parseInt(confeitaria.innerText)<60)
+            {
+                melhorias.innerText = nome.innerText +", considere estudar mais Confeitaria!";
+            }
+            if(parseInt(coberturas.innerText)<60)
+            {
+                melhorias.innerText =  melhorias.innerText + nome.innerText +", considere estudar mais Coberturas  !";
+            }
+            if(parseInt(bolos.innerText)<60)
+            {
+                melhorias.innerText = melhorias.innerText + nome.innerText +", considere estudar mais Broas e Bolos!";
             }
         }
     </script>
